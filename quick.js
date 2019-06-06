@@ -1,13 +1,11 @@
-//http://me.dt.in.th/page/Quicksort/
 const now = require("performance-now");
+const bigArrObject = require('./bigArr.js');
+const input = bigArrObject['bigArr'];
+
 const t0 = now();
-//const input = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]; //works
-//const input = [4, 1, 6, 1, 9, 5, 6, 7]; //works
-const input = [1, -5 , 70, 0]; //works
+
 
 let sorted = new Map(); //very dumb global variable that tracks sorted indexes
-
-//console.log(input);
 
 const partition = (arr, pivot) => {
   //iterate arr
@@ -48,7 +46,8 @@ const multiSort = arr => {
     }
   }
 };
-
+//console.log(input);
 multiSort(input);
+//console.log(input);
 const t1 = now();
 console.log(t1-t0);
